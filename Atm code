@@ -1,49 +1,33 @@
-class ATM:
-    def __init__(self):
-        self.balance = 0
+# ATM Code
+# variable
+Atm_card = "card"
+pin = 1234
+Money = 1000
+Temp = 0
 
-    def check_balance(self):
-        print(f"Your current balance is: ${self.balance}")
+# code starts
+for outer in [1,2,3,4]: # 1 2
+# outer for loop you are the person
+    print("You are in front of atm machine")
+    print("insert your card")
+    print ("enter your pin")
 
-    def deposit(self, amount):
-        if amount <= 0:
-            print("Deposit amount must be positive.")
+    # If
+    if (Atm_card == "card") & (pin == 1234): # True
+        # Nested If
+        if outer <= 3: # 2 == 1 False
+            # ATM Machine
+            while Temp <= Money:# 0 <= 1000 ture
+                print( "count", Temp, "Total Amount", Money)
+                Temp = Temp + 100 # 0 100 200 300 400
         else:
-            self.balance += amount
-            print(f"You have deposited ${amount}. Your new balance is: ${self.balance}")
-
-    def withdraw(self, amount):
-        if amount <= 0:
-            print("Withdrawal amount must be positive.")
-        elif amount > self.balance:
-            print("Insufficient funds.")
-        else:
-            self.balance -= amount
-            print(f"You have withdrawn ${amount}. Your new balance is: ${self.balance}")
-
-def main():
-    atm = ATM()
-    while True:
-        print("\nATM Menu:")
-        print("1. Check Balance")
-        print("2. Deposit Money")
-        print("3. Withdraw Money")
-        print("4. Exit")
-        choice = input("Choose an option: ")
-
-        if choice == '1':
-            atm.check_balance()
-        elif choice == '2':
-            amount = float(input("Enter the amount to deposit: "))
-            atm.deposit(amount)
-        elif choice == '3':
-            amount = float(input("Enter the amount to withdraw: "))
-            atm.withdraw(amount)
-        elif choice == '4':
-            print("Thank you for using the ATM. Goodbye!")
+            print("only three atempt is possible")
             break
-        else:
-            print("Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    main()
+        print("take your money", Money, "rupee")
+        Temp = 0
+        print("===================")
+    elif (Atm_card == "card") | (pin == 1234):
+        print("any one value is worng")
+    else:
+        print("both values are wrong")
+        print("Thank you for use")
